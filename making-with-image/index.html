@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="box">
+        <img class="img_box" src="./image/1.png" alt="">
+        <img class="img_box" src="./image/2.jpg" alt="">
+        <img class="img_box" src="./image/3.jpg" alt="">
+        <img class="img_box" src="./image/4.png" alt="">
+    </div>
+</body>
+<script>
+    const imgAll = document.querySelectorAll('.img_box')
+    let index = 0
+    let number = 0
+    let time
+    let time2
+    let time3
+    let time4
+    let time5
+    // 1
+    function clear() {
+        for (let i = 0; i < imgAll.length; i++) {
+            imgAll[i].className = 'img_box'
+
+        }
+    }
+    function clearTime() {
+        clearInterval(time)
+        clearInterval(time2)
+        clearInterval(time3)
+        clearInterval(time4)
+        clearInterval(time5)
+
+    }
+    setInterval(() => {
+        clearTime()
+        if (number > 9) {
+            number = 0
+        }
+        if (number == 0) {
+            index = 0
+            time = setInterval(() => {
+
+                if (index > 3) {
+                    index = 0
+                }
+
+
+                clear()
+                console.log(index);
+                imgAll[index].className = 'img_box scale'
+                index++
+            }, 1000);
+        }
+
+        if (number == 1) {
+            index = 0
+            time2 = setInterval(() => {
+
+                if (index > 3) {
+                    index = 0
+                }
+                if (index == 0 || index == 2) {
+                    clear()
+                    // console.log(index);
+                    imgAll[0].className = 'img_box scale3'
+                    imgAll[1].className = 'img_box scale2'
+                }
+                if (index == 1 || index == 3) {
+                    clear()
+                    // console.log(index);
+                    imgAll[2].className = 'img_box scale3'
+                    imgAll[3].className = 'img_box scale2'
+                }
+
+
+                index++
+            }, 1000);
+        }
+        if (number == 2) {
+            time3 = setInterval(() => {
+
+                if (index > 3) {
+                    index = 0
+                }
+                if (index == 0 || index == 2) {
+                    clear()
+                    console.log(index);
+                    imgAll[0].className = 'img_box scale3'
+                    imgAll[3].className = 'img_box scale2'
+                }
+                if (index == 1 || index == 3) {
+                    clear()
+                    console.log(index);
+                    imgAll[1].className = 'img_box scale3'
+                    imgAll[2].className = 'img_box scale2'
+                }
+
+
+                index++
+            }, 1000);
+        }
+        if (number == 3) {
+            time4 = setInterval(() => {
+
+                if (index > 3) {
+                    index = 0
+                }
+
+
+                clear()
+                console.log(index);
+                imgAll[index].className = 'img_box rotate'
+                index++
+            }, 1000);
+        }
+        if (number == 4) {
+            time5 = setInterval(() => {
+
+                if (index > 3) {
+                    index = 0
+                }
+                if (index == 0 || index == 2) {
+                    clear()
+                    console.log(index);
+                    imgAll[0].className = 'img_box rotate'
+                    imgAll[1].className = 'img_box rotate'
+                }
+                if (index == 1 || index == 3) {
+                    clear()
+                    console.log(index);
+                    imgAll[2].className = 'img_box rotate'
+                    imgAll[3].className = 'img_box rotate'
+                }
+
+
+                index++
+            }, 1000);
+        }
+        if (number == 5) {
+            setTransalte()
+        }
+        if (number == 6) {
+            setTransalte2()
+        }
+        if (number == 7) {
+            setTransalte3()
+        }
+        if (number == 8) {
+            setTransalte4()
+        }
+
+        number++
+    }, 4200);
+
+
+    //    2
+
+
+    // 3 
+
+
+    // 4
+
+    //    5
+
+    // 6
+    function setTransalte() {
+        imgAll[0].className = 'img_box translate1'
+        imgAll[1].className = 'img_box translate2'
+        imgAll[2].className = 'img_box translate4'
+        imgAll[3].className = 'img_box translate3'
+    }
+
+    // 7
+    function setTransalte2() {
+        imgAll[0].className = 'img_box translate2'
+        imgAll[1].className = 'img_box translate3'
+        imgAll[2].className = 'img_box translate1'
+        imgAll[3].className = 'img_box translate4'
+    }
+
+    // 8
+
+    function setTransalte3() {
+        imgAll[0].className = 'img_box translate5'
+        imgAll[1].className = 'img_box translate7'
+        imgAll[2].className = 'img_box translate8'
+        imgAll[3].className = 'img_box translate6'
+    }
+    //  9
+    function setTransalte4() {
+        imgAll[0].className = 'img_box translate2'
+        imgAll[1].className = 'img_box translate2'
+        imgAll[2].className = 'img_box translate4'
+        imgAll[3].className = 'img_box translate4'
+    }
+
+</script>
+
+</html>
