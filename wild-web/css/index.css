@@ -1,0 +1,117 @@
+body {
+    background-color: rgb(10, 20, 40);
+}
+
+@font-face {  
+    font-family: 'MyCustomFont'; /* 自定义的字体名称 */  
+    src: url('../fonts/Crystal-Medium-2.ttf') format('truetype');  
+    font-weight: normal; /* 字体粗细 */  
+    font-style: normal; /* 字体样式，如斜体 */  
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.a1 {
+    /* height: 100vh; */
+    width: 99vw;
+    box-sizing: border-box;
+    padding: 30px;
+    background: url("../images/1.png") no-repeat;
+    background-size: 30%;
+}
+
+
+.f {
+    font-family: "MyCustomFont";
+    font-weight: 700;
+    color: #fff;
+}
+
+.g {
+    font-size: 36px;
+    text-align: right;
+}
+
+.h {
+    float: right;
+    width: 50vw;
+    margin-top: 30px;
+    font-size: 24px;
+    text-align: center;
+    color: rgb(255, 0, 131);
+}
+
+.line {
+    height: 10px;
+    background-color: rgb(255, 0, 131);
+    width: 60%;
+    margin: 20px auto;
+    z-index: 99;
+}
+
+/* .a2 {
+    height: 100vh;
+}
+
+.a3 {
+    height: 100vh;
+}
+
+.a4 {
+    height: 100vh;
+}
+
+.a5 {
+    height: 100vh;
+} */
+
+.a2-text {
+    width: 80vw;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+}
+
+.a4-text {
+    width: 75%;
+    background-color: rgb(223, 213, 253);
+    box-sizing: border-box;
+    padding: 30px;
+    font-size: 20px;
+    margin: auto;
+}
+
+.a4-img {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.a4-img img {
+    width: 360px;
+    height: 220px;
+}
+
+.a5-box {
+    width: 90%;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 30px;
+    background-color: rgb(60, 0, 150);
+}
+
+.border {
+    border: 20px solid #000;
+    padding: 30px;
+}
+.a5-text {
+    color: #fff;
+    font-size: 20px;
+}
